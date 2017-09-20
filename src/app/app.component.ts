@@ -7,9 +7,10 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('f') formObject: NgForm;
+  @ViewChild('f') signupForm: NgForm;
   defaultQuestion: string = "teacher";
   answer = '';
+  genders = ['male', 'female'];
 
   suggestUserName() {
     const suggestedName = 'Superuser';
@@ -20,6 +21,6 @@ export class AppComponent {
   // }
 
   onSubmit() {
-    console.log(this.formObject);
+    console.log(this.signupForm);
   }
 }
